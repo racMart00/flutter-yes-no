@@ -1,26 +1,40 @@
-# yes_no
+# YES NO APP
+ A new Flutter project.
 
-A new Flutter project.
+# -->Pasos para hacer mi primer commit<--
+1. git init
+2. git add .
+3. git commit -m "first commit"
+4. git remote add origin https://github.com/NOMBRE_USUARIO/NOMBRE_PROYECTO.git
+5. git push -u origin master
 
-## Getting Started
+# -->Crear una rama nueva y movernos a ella<--
+1. git checkout -b branch_name
 
-This project is a starting point for a Flutter application.
+# -->Volver al ultimo commit<--
+1. git checkout -- .
 
-A few resources to get you started if this is your first Flutter project:
+# -->Flujo de la Arquitectura Limpia<--
+1. UI: Tiene la comunicacion con la capa de presentacion
+2. Presentacion: Tiene providers o gestionadores de estado q terminan llamando los casos de uso
+3. Casos de Uso: Se comunica con los repositorios //NO SE HACE EN ESTE PROYECTO
+4. Repositorios y Datasources: Los repositorios llaman los datasources
+5. Informacion: Y luego la informacion regresa al UI.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# -->Run Flutter Launcher Icons<--
+1. dart run flutter_launcher_icons
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# -->Run Flutter Rename App<--
+1. dart run rename_app:main all="My App Name"
+2. dart run rename_app:main android="Anroid Name" ios="IOS Name" others="Others Name"
+3. dart run rename_app:main android="Android Name" ios="IOS Name" web="Web Name" mac="Mac Name" windows="Windows Name"
 
-git init
+# -->Build<--
+1. flutter build apk
 
-git add .
-
-git commit -m "first commit"
-
-git remote add origin https://github.com/NOMBRE_USUARIO/NOMBRE_PROYECTO.git
-
-git push -u origin master
+# -->Ruta para instalar apk en emulador<--
+1. C:\Users\racma\AppData\Local\Android\Sdk\platform-tools
+2. Copiar nombre.apk en esta ruta
+2. Crear txt escribir CMD y guardarlo como run.bat en esta ruta
+2. Iniciar run.bat
+2. adb install nombre.apk
